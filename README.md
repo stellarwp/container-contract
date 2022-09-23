@@ -156,7 +156,7 @@ class Container implements ContainerInterface {
 	 */
 	public function singleton( string $id, $implementation = null ) {
 		$this->singletons[ $id ] = true;
-		return $this->container->bind( $id, $implementation );
+		return $this->container->set( $id, $implementation );
 	}
 
 	/**
