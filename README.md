@@ -12,4 +12,4 @@ It's recommended that you install this contract as a project dependency via [Com
 composer require stellarwp/container-contract
 ```
 
-_Note: If you typically use a tool like [Strauss](https://github.com/BrianHenryIE/strauss), should **not** customize the namespace of this library in order to have proper compatibility with StellarWP libraries._
+_Note: If you typically use a tool like [Strauss](https://github.com/BrianHenryIE/strauss), you should **not** customize the namespace of this library in order to have proper compatibility with StellarWP libraries._
