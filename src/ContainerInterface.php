@@ -5,7 +5,7 @@ namespace StellarWP\ContainerContract;
 /**
  * Describes the interface of a container that exposes methods to read its entries.
  */
-interface Contract {
+interface ContainerInterface {
 	/**
 	 * Binds an interface, a class or a string slug to an implementation.
 	 *
