@@ -100,7 +100,7 @@ class Container implements ContainerInterface {
 	 * Container constructor.
 	 */
 	public function __construct() {
-		$this->container = new PHPDIontainer();
+		$this->container = new PHPDIContainer();
 	}
 
 	/**
