@@ -21,7 +21,7 @@
 	},
 	"autoload": {
 		"psr-4": {
-			"StellarWP\\Container\\": "src/"
+			"StellarWP\\ContainerContract\\": "src/"
 		}
 	}
 }
