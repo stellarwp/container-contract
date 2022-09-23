@@ -17,7 +17,7 @@ interface ContainerInterface {
 	 *
 	 * @return mixed Entry.
 	 */
-	public function bind( string $id, $implementation );
+	public function bind( $id, $implementation );
 
 	/**
 	 * Finds an entry of the container by its identifier and returns it.
@@ -26,7 +26,7 @@ interface ContainerInterface {
 	 *
 	 * @return mixed Entry.
 	 */
-	public function get( string $id );
+	public function get( $id );
 
 	/**
 	 * Returns true if the container can return an entry for the given identifier.
@@ -39,7 +39,7 @@ interface ContainerInterface {
 	 *
 	 * @return bool
 	 */
-	public function has( string $id ) : bool;
+	public function has( $id );
 
 	/**
 	 * Binds an interface a class or a string slug to an implementation and will always return the same instance.
@@ -50,5 +50,5 @@ interface ContainerInterface {
 	 *
 	 * @return void This method does not return any value.
 	 */
-	public function singleton( string $id, $implementation );
+	public function singleton( $id, $implementation );
 }
