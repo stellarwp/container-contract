@@ -17,7 +17,7 @@ interface ContainerInterface {
 	 *
 	 * @return mixed Entry.
 	 */
-	public function bind( string $id, $implementation );
+	public function bind( string $id, $implementation = null );
 
 	/**
 	 * Finds an entry of the container by its identifier and returns it.
@@ -50,5 +50,5 @@ interface ContainerInterface {
 	 *
 	 * @return void This method does not return any value.
 	 */
-	public function singleton( string $id, $implementation );
+	public function singleton( string $id, $implementation = null );
 }
