@@ -1,11 +1,11 @@
 <?php
 
-namespace StellarWP\Container;
+namespace StellarWP\ContainerContract;
 
 /**
  * Describes the interface of a container that exposes methods to read its entries.
  */
-interface ContainerInterface {
+interface Contract {
 	/**
 	 * Binds an interface, a class or a string slug to an implementation.
 	 *
