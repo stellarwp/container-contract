@@ -28,3 +28,59 @@ class Container implements ContainerInterface {
 	public function singleton( string $id, $implementation ) {}
 }
 ```
+
+## Example extensions of other containers
+
+### [DI52](https://github.com/lucatume/di52)
+
+```php
+
+use lucatume\DI52\Container as DI52Container;
+use StellarWP\ContainerContract\ContainerInterface;
+
+class Container implements ContainerInterface {
+	protected $container;
+
+	/**
+	 * Container constructor.
+	 */
+	public function __construct() {
+		$this->container = new DI52Container();
+	}
+
+	/**
+	 * @inheritDoc
+	 */
+	public function bind( string $id, $implementation = null ) {
+		return $this->container->bind( $id, $implementation );
+	}
+
+	/**
+	 * @inheritDoc
+	 */
+	public function get( string $id ) {
+		return $this->container->get( $id );
+	}
+
+	/**
+	 * @inheritDoc
+	 */
+	public function has( string $id ) {
+		return $this->container->has( $id );
+	}
+
+	/**
+	 * @inheritDoc
+	 */
+	public function singleton( string $id, $implementation = null ) {
+		return $this->container->singleton( $id, $implementation );
+	}
+
+	/**
+	 * Defer all other calls to the container object.
+	 */
+	public function __call( $name, $args ) {
+		return $this->container->{$name}( ...$args );
+	}
+}
+```
