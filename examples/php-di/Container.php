@@ -12,7 +12,6 @@ use Your\Namespace\DI\Container as PHPDIContainer;
 
 class Container implements ContainerInterface {
 	protected $container;
-	protected $singletons = [];
 
 	/**
 	 * Container constructor.
